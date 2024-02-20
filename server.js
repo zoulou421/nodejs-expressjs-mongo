@@ -42,3 +42,9 @@ server.on('listening', () => {
     console.log('Listening on ' + bind);
 });
 server.listen(port);
+
+the normalizePort function returns a valid port, whether provided as a number or a string;
+
+The errorHandler function checks for different errors and handles them appropriately. It is then saved in the server;
+
+an event listener is also registered, logging the port or named pipe the server is running on to the console
