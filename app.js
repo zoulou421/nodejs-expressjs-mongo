@@ -12,5 +12,6 @@ app.use((req, res, next)=>{
 });
 app.use((request, response,next)=>{
     response.json({message:"Your request app is sent  successfully!"});
+    console.log("Your request app is sent  successfully!")
 });
 module.exports=app;
