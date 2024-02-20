@@ -1,3 +1,11 @@
+/*
+the normalizePort function returns a valid port, whether provided as a number or a string;
+
+The errorHandler function checks for different errors and handles them appropriately. It is then saved in the server;
+
+an event listener is also registered, logging the port or named pipe the server is running on to the console
+ */
+
 const http= require('http');
 const myApp=require('./app');
 const normalizePort=val=>{
@@ -10,7 +18,7 @@ const normalizePort=val=>{
     }
     return false;
 };
-const port= normalizePort(process.env.PORT||'3000');
+const port= normalizePort(process.env.PORT||'8099');
 myApp.set('port',port);
 
 const errorHandler = error => {
@@ -42,9 +50,3 @@ server.on('listening', () => {
     console.log('Listening on ' + bind);
 });
 server.listen(port);
-
-the normalizePort function returns a valid port, whether provided as a number or a string;
-
-The errorHandler function checks for different errors and handles them appropriately. It is then saved in the server;
-
-an event listener is also registered, logging the port or named pipe the server is running on to the console
